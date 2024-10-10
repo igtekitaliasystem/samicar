@@ -203,459 +203,468 @@
 			</header>
 
 			<div role="main" class="main">
-	<!-- Slider page d'accueil -->	
-	<img loading="lazy" aria-label="Welcome to Worldcup 2030" srcset="worldcup-samicar-fr-400w.png 400w, worldcup-samicar-fr-600w.png 600w, worldcup-samicar-fr-800w.png 800w, worldcup-samicar-fr-1000w.png 1000w, worldcup-samicar-fr-1200w.png 1200w, worldcup-samicar-fr-1600w.pmg 1600w, worldcup-samicar-fr-2000w.png 2000w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (min-width: 1601px) 2000px" src="images/worldcup-samicar-fr.jpg" alt="Car rental in Morocco for worldcup 2030" width="100%">
-<section class="section section-no-background m-none" style="padding-top: 10px;">
-	<div class="container">
-		<div id="reservation">
-			<div class="row">
-				<div class="col">
-					<div class="featured-boxes mt-none mb-none">
-						<div class="featured-box featured-box-primary mt-xl">
-							<div class="box-content px-1" aria-label="Car search form">
-								<h4 class="mb-none">Réservation</h4>
-								<p>Sélectionnez la ville, la date et l'heure de retrait et de retour du véhicule</p>
-								
-<!-- <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js" defer="true"></script> -->
-<form action="/reservation.php" method="POST" id="form-reservation" class="form-horizontal">
-	<input type="hidden" name="etape" value="2">
-	<div class="row">	
-		<div class="col-md-4 col-12">
-	        <div class="form-group">
-                <select name="point1" id="point1" class="form-control form-control-lg">
-                <option data-city="agadir" value="68">Agadir - Aéroport</option>
-<option data-city="agadir" value="82">Agadir - Mon Hotel</option>
-<option data-city="casablanca" value="1">Casablanca - Aéroport </option>
-<option data-city="casablanca" value="92">Casablanca - Agence ville </option>
-<option data-city="casablanca" value="97">Casablanca - CasaPort</option>
-<option data-city="casablanca" value="99">Casablanca - CasaVoyageur </option>
-<option data-city="casablanca" value="93">Casablanca - Mon Hotel</option>
-<option data-city="casablanca" value="98">Casablanca - Oasis </option>
-<option data-city="eljadida" value="96">El Jadida - agence ville</option>
-<option data-city="eljadida" value="100">El Jadida - Gare ferroviaire</option>
-<option data-city="fes" value="72">Fès - Aéroport</option>
-<option data-city="fes" value="104">Fès - Agence ville</option>
-<option data-city="fes" value="73">Fès - Mon Hotel</option>
-<option data-city="marrakech" value="5" selected="selected">Marrakech - Aéroport</option>
-<option data-city="marrakech" value="83">Marrakech - agence ville</option>
-<option data-city="marrakech" value="84">Marrakech - Mon Hotel</option>
-<option data-city="rabat" value="94">Rabat - Aéroport</option>
-<option data-city="rabat" value="95">Rabat - Mon Hotel</option>
-<option data-city="tanger" value="87">Tanger - Aéroport</option>
-<option data-city="tanger" value="101">Tanger - Port Med</option>
-<option data-city="tanger" value="90">Tanger - Port ville</option>
-<option data-city="tetouan" value="91">Tétouan - Aéroport</option>
-                </select>
-	        </div>
-		</div>
-		<div class="col-md-4 col-7">
-	        <div class="form-group">
-                <input type="date" name="date1" id="date1" class="form-control form-control-lg" placeholder="Date de départ" value="2024-10-11" lang="fr-fr" min="2024-10-10">
-	        </div>
-		</div>
-	    <div class="col-md-4 col-5">
-	        <div class="form-group">
-                <input type="time" name="hour1" id="hour1" class="form-control form-control-lg" value="10:00">
-	        </div>
-	    </div>
-    </div>
-    <div class="row">	
-		<div class="col-md-4 col-12">
-	        <div class="form-group">
-                <select name="point2" id="point2" class="form-control form-control-lg">
-                <option data-city="agadir" value="68">Agadir - Aéroport</option>
-<option data-city="agadir" value="82">Agadir - Mon Hotel</option>
-<option data-city="casablanca" value="1">Casablanca - Aéroport </option>
-<option data-city="casablanca" value="92">Casablanca - Agence ville </option>
-<option data-city="casablanca" value="97">Casablanca - CasaPort</option>
-<option data-city="casablanca" value="99">Casablanca - CasaVoyageur </option>
-<option data-city="casablanca" value="93">Casablanca - Mon Hotel</option>
-<option data-city="casablanca" value="98">Casablanca - Oasis </option>
-<option data-city="eljadida" value="96">El Jadida - agence ville</option>
-<option data-city="eljadida" value="100">El Jadida - Gare ferroviaire</option>
-<option data-city="fes" value="72">Fès - Aéroport</option>
-<option data-city="fes" value="104">Fès - Agence ville</option>
-<option data-city="fes" value="73">Fès - Mon Hotel</option>
-<option data-city="marrakech" value="5" selected="selected">Marrakech - Aéroport</option>
-<option data-city="marrakech" value="83">Marrakech - agence ville</option>
-<option data-city="marrakech" value="84">Marrakech - Mon Hotel</option>
-<option data-city="rabat" value="94">Rabat - Aéroport</option>
-<option data-city="rabat" value="95">Rabat - Mon Hotel</option>
-<option data-city="tanger" value="87">Tanger - Aéroport</option>
-<option data-city="tanger" value="101">Tanger - Port Med</option>
-<option data-city="tanger" value="90">Tanger - Port ville</option>
-<option data-city="tetouan" value="91">Tétouan - Aéroport</option>
-                </select>
-	        </div>
-		</div>
-		<div class="col-md-4 col-7">
-	        <div class="form-group">
-                <input type="date" name="date2" id="date2" class="form-control" value="2024-10-18" placeholder="Date de retour" lang="fr-fr">
-	        </div>
-		</div>
-	    <div class="col-md-4 col-5">
-	        <div class="form-group">
-                <input type="time" name="hour2" id="hour2" class="form-control" value="10:00">
-	        </div>
-	    </div>
-    </div>
+				<!-- Slider page d'accueil -->
 
-    <div class="row">
-	    <div class="col-md-4">
-		    <div class="form-group">
-			    <label class="checkbox-inline">
-					<input type="checkbox" class="form-check-input me-2" name="aged" id="aged" checked="" required="">
-					Agé entre 23 et 75 ans				</label>
-		    </div>
-	    </div>
-	    <div class="col-md-4">
-	    </div>
-	    <div class="col-md-4">
-		    <div class="form-group mb-0">
-	            <button type="submit" class="btn btn-danger mr-xs mb-sm" id="recherche_reservation">
-	            	<span id="load-icone"></span> <span class="glyphicon glyphicon glyphicon-search"></span> Chercher				</button>
-	        </div>
-	    </div>
-    </div>
 
-</form>
-							</div>
-						</div>
-						<a class="ma-reservation pull-left" href="https://booking.samicar.ma/acc-samicar/index.jsp?sitelang=fr" title="Ma réservation"><i class="fa fa-calendar"></i> Ma réservation</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-	<!-- No services -->
-	<section class="section m-none services">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<h1 class="font-weight-bold">Samicar : <strong>Location de voiture </strong> partout au Maroc</h1>
-					<h2>Nos <strong>Services</strong></h2>
-				</div>
-			</div>
-			<div class="row my-5">
-				<div class="col-4">
-					<div class="row">
-						<div class="col-md-4">
-							<img loading="lazy" class="img-responsive mb-lg" width="100" height="100" src="100-online-booking.png" alt="Location de voiture 100% en ligne">
-						</div>
-						<div class="col-md-8">
-							<h3 class="font-weight-bold alternative-font-2 my-0">Réservation 100% en ligne</h3>
-							<p class="my-0">Pas besoin d'appeler au téléphone, pas besoin de demande de devis, tout est simple.</p>
-							<div class="text-end"><a class="btn btn-modern btn-primary btn-xs mb-1" href="/location-100-pour-100-en-ligne.php" title="Location de voiture 100% en ligne">Plus d'infos <i class="fa fa-arrow-right"></i></a></div>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="row">
-						<div class="col-md-4">
-							<img loading="lazy" class="img-responsive mb-lg" width="100" height="100" src="no-credit-card.png" alt="Réservation sans dépot de garantie">
-						</div>
-						<div class="col-md-8">
-							<h3 class="font-weight-bold alternative-font-2 my-0">Réservation sans dépôt</h3>
-							<p class="my-0">Vous ne voulez pas bloquer une caution sur votre carte de crédit? Choisissez le pack Premium</p>
-							<div class="text-end"><a class="btn btn-modern btn-primary btn-xs mb-1" href="/location-sans-carte-credit" title="Réservation sans dépôt">Plus d'infos <i class="fa fa-arrow-right"></i></a></div>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="row">
-						<div class="col-md-4">
-							<img loading="lazy" class="img-responsive mb-lg" width="100" height="100" src="one-way-rental.png" alt="Location de voiture �&nbsp; sense unique">
-						</div>
-						<div class="col-md-8">
-							<h3 class="font-weight-bold alternative-font-2 my-0">Réservation �&nbsp; sense unique</h3>
-							<p class="my-0">Prenez la voiture dans une ville et retournez-la dans une autre ville</p>
-							<div class="text-end"><a class="btn btn-modern btn-primary btn-xs mb-1" href="/location-de-voiture-inter-villes" title="Réservation �&nbsp; sense unique">Plus d'infos <i class="fa fa-arrow-right"></i></a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-4">
-					<div class="row">
-						<div class="col-md-4">
-							<img loading="lazy" class="img-responsive mb-lg" width="100" height="100" src="prix-final.png" alt="Prix final garanti">
-						</div>
-						<div class="col-md-8">
-							<h3 class="font-weight-bold alternative-font-2 my-0">Prix final garanti</h3>
-							<p class="my-0">Vous ne payez que ce qui a été affiché �&nbsp; la réservation! Pas de frais cachés</p>
-							<div class="text-end"><a class="btn btn-modern btn-primary btn-xs mb-1" href="/prix-final-garanti.php" title="Prix final garanti">Plus d'infos <i class="fa fa-arrow-right"></i></a></div>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="row">
-						<div class="col-md-4">
-							<img loading="lazy" class="img-responsive mb-lg" width="100" height="100" src="airport-transfer.png" alt="Transfert Aéroport">
-						</div>
-						<div class="col-md-8">
-							<h3 class="font-weight-bold alternative-font-2 my-0">Transfert Aéroport</h3>
-							<p class="my-0">Un chauffeur professionnel pour faire de votre voyage une réelle détente</p>
-							<div class="text-end"><a class="btn btn-modern btn-primary btn-xs mb-1" href="/transfert-aeroport-casablanca.php" title="Transfert Aéroport Casablanca">Plus d'infos <i class="fa fa-arrow-right"></i></a></div>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="row">
-						<div class="col-md-4">
-							<img loading="lazy" class="img-responsive mb-lg" width="100" height="100" src="online-check-in-small.png" alt="Enregistrement en ligne">
-						</div>
-						<div class="col-md-8">
-							<h3 class="font-weight-bold alternative-font-2 my-0">Enregistrement en ligne</h3>
-							<p class="my-0">Envoyez vos documents en ligne et simplifiez les démarches �&nbsp; l'arrivée</p>
-							<div class="text-end"><a class="btn btn-modern btn-primary btn-xs mb-1" href="/enregistrement-en-ligne.php" title="Enregistrement en ligne">Plus d'infos <i class="fa fa-arrow-right"></i></a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+				<img loading="lazy" aria-label="Welcome to Worldcup 2030" srcset="./site2/img/slides/worldcup-samicar-fr-400w.avif 400w, ./site2/img/slides/worldcup-samicar-fr-600w.avif 600w, ./site2/img/slides/worldcup-samicar-fr-800w.avif 800w, ./site2/img/slides/worldcup-samicar-fr-1000w.avif 1000w, ./site2/img/slides/worldcup-samicar-fr-1200w.avif 1200w, ./site2/img/slides/worldcup-samicar-fr-1600w.avif 1600w, ./site2/img/slides/worldcup-samicar-fr-2000w.avif 2000w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (min-width: 1601px) 2000px" src="./site2/img/slides/worldcup-samicar-fr.jpg" alt="Car rental in Morocco for worldcup 2030" width="100%">
 
-	<section class="section section-no-background m-none">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h2 class="mb-lg"><strong>Samicar : </strong>Location de voitures au Maroc</h2>
-					<p class="lead">Samicar dispose actuellement de plus d'une agence au Maroc, présentes sur les plus grandes villes marocaines, <strong>Casablanca, Marrakech, Tanger, El Jadida, Rabat, Fes et Safi.</strong></p>
-					<p>La <a href="https://www.samicar.com/"><strong>Location voiture marrakech</strong></a> est facile avec notre agence Samicar qui vous offre une large gamme de voitures : Berlines, 4x4 et minibus... Organisez votre <a href="https://www.samicar.com/"><strong>Location de voitures</strong></a> et votre véhicules vous attendra dès votre arrivée �&nbsp; l’aéroport ou la gare de <strong>Marrakech</strong>. On vous permet de louer facilement et rapidement une voiture de votre choix �&nbsp; marrakech.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-	<section class="section m-none">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 center">
-					<h2>Notre <strong>Sélection</strong></h2>
-				</div>
-			</div>
-			<div class="row">
-	<div class="col-md-12">
-		<div class="row">
-							<span class="col-md-4 thumb-info thumb-info-hide-wrapper-bg mb-xlg nohide" data-car="11" data-category="J">
-					<span class="thumb-info-wrapper">
-						<a href="reservation.php">
-							<picture>
-								<source type="image/webp" srcset="images/th-dacia-duster-2wd-.webp">
-								<img width="300" height="222" src="images/th-dacia-duster-2wd-.jpeg" alt="Dacia Duster 2wd" class="col-12 responsive-image">
-							</picture>
-							<span class="thumb-info-title">
-								<span class="thumb-info-inner">Dacia Duster 2wd</span>
-								<span class="thumb-info-type">A partir de <strong>45</strong> EUR</span>
-							</span>
-						</a>
-					</span>
-				</span>
-								<span class="col-md-4 thumb-info thumb-info-hide-wrapper-bg mb-xlg nohide" data-car="10" data-category="I">
-					<span class="thumb-info-wrapper">
-						<a href="reservation.php">
-							<picture>
-								<source type="image/webp" srcset="images/th-dacia-lodgy-7-places-.webp">
-								<img width="300" height="222" src="images/th-dacia-lodgy-7-places-.jpeg" alt="Dacia Lodgy 7 Places" class="col-12 responsive-image">
-							</picture>
-							<span class="thumb-info-title">
-								<span class="thumb-info-inner">Dacia Lodgy 7 Places</span>
-								<span class="thumb-info-type">A partir de <strong>35</strong> EUR</span>
-							</span>
-						</a>
-					</span>
-				</span>
-								<span class="col-md-4 thumb-info thumb-info-hide-wrapper-bg mb-xlg nohide" data-car="14" data-category="A">
-					<span class="thumb-info-wrapper">
-						<a href="reservation.php">
-							<picture>
-								<source type="image/webp" srcset="images/th-dacia-sandero-.webp">
-								<img width="300" height="222" src="images/th-dacia-sandero-.png" alt="DACIA Sandero" class="col-12 responsive-image">
-							</picture>
-							<span class="thumb-info-title">
-								<span class="thumb-info-inner">DACIA Sandero</span>
-								<span class="thumb-info-type">A partir de <strong>22</strong> EUR</span>
-							</span>
-						</a>
-					</span>
-				</span>
+
+
+				<section class="section section-no-background m-none" style="padding-top: 10px;">
+					<div class="container">
+						<div id="reservation">
+							<div class="row">
+								<div class="col">
+									<div class="featured-boxes mt-none mb-none">
+										<div class="featured-box featured-box-primary mt-xl">
+											<div class="box-content px-1" aria-label="Car search form">
+												<h4 class="mb-none">Réservation</h4>
+												<p>Sélectionnez la ville, la date et l'heure de retrait et de retour du véhicule</p>
+
+												<!-- <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js" defer="true"></script> -->
+												<form action="/reservation.php" method="POST" id="form-reservation" class="form-horizontal">
+													<input type="hidden" name="etape" value="2">
+													<div class="row">
+														<div class="col-md-4 col-12">
+															<div class="form-group">
+																<select name="point1" id="point1" class="form-control form-control-lg">
+																	<option data-city="agadir" value="68">Agadir - Aéroport</option>
+																	<option data-city="agadir" value="82">Agadir - Mon Hotel</option>
+																	<option data-city="casablanca" value="1">Casablanca - Aéroport </option>
+																	<option data-city="casablanca" value="92">Casablanca - Agence ville </option>
+																	<option data-city="casablanca" value="97">Casablanca - CasaPort</option>
+																	<option data-city="casablanca" value="99">Casablanca - CasaVoyageur </option>
+																	<option data-city="casablanca" value="93">Casablanca - Mon Hotel</option>
+																	<option data-city="casablanca" value="98">Casablanca - Oasis </option>
+																	<option data-city="eljadida" value="96">El Jadida - agence ville</option>
+																	<option data-city="eljadida" value="100">El Jadida - Gare ferroviaire</option>
+																	<option data-city="fes" value="72">Fès - Aéroport</option>
+																	<option data-city="fes" value="104">Fès - Agence ville</option>
+																	<option data-city="fes" value="73">Fès - Mon Hotel</option>
+																	<option data-city="marrakech" value="5" selected="selected">Marrakech - Aéroport</option>
+																	<option data-city="marrakech" value="83">Marrakech - agence ville</option>
+																	<option data-city="marrakech" value="84">Marrakech - Mon Hotel</option>
+																	<option data-city="rabat" value="94">Rabat - Aéroport</option>
+																	<option data-city="rabat" value="95">Rabat - Mon Hotel</option>
+																	<option data-city="tanger" value="87">Tanger - Aéroport</option>
+																	<option data-city="tanger" value="101">Tanger - Port Med</option>
+																	<option data-city="tanger" value="90">Tanger - Port ville</option>
+																	<option data-city="tetouan" value="91">Tétouan - Aéroport</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-md-4 col-7">
+															<div class="form-group">
+																<input type="date" name="date1" id="date1" class="form-control form-control-lg" placeholder="Date de départ" value="2024-10-11" lang="fr-fr" min="2024-10-10">
+															</div>
+														</div>
+														<div class="col-md-4 col-5">
+															<div class="form-group">
+																<input type="time" name="hour1" id="hour1" class="form-control form-control-lg" value="10:00">
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-4 col-12">
+															<div class="form-group">
+																<select name="point2" id="point2" class="form-control form-control-lg">
+																	<option data-city="agadir" value="68">Agadir - Aéroport</option>
+																	<option data-city="agadir" value="82">Agadir - Mon Hotel</option>
+																	<option data-city="casablanca" value="1">Casablanca - Aéroport </option>
+																	<option data-city="casablanca" value="92">Casablanca - Agence ville </option>
+																	<option data-city="casablanca" value="97">Casablanca - CasaPort</option>
+																	<option data-city="casablanca" value="99">Casablanca - CasaVoyageur </option>
+																	<option data-city="casablanca" value="93">Casablanca - Mon Hotel</option>
+																	<option data-city="casablanca" value="98">Casablanca - Oasis </option>
+																	<option data-city="eljadida" value="96">El Jadida - agence ville</option>
+																	<option data-city="eljadida" value="100">El Jadida - Gare ferroviaire</option>
+																	<option data-city="fes" value="72">Fès - Aéroport</option>
+																	<option data-city="fes" value="104">Fès - Agence ville</option>
+																	<option data-city="fes" value="73">Fès - Mon Hotel</option>
+																	<option data-city="marrakech" value="5" selected="selected">Marrakech - Aéroport</option>
+																	<option data-city="marrakech" value="83">Marrakech - agence ville</option>
+																	<option data-city="marrakech" value="84">Marrakech - Mon Hotel</option>
+																	<option data-city="rabat" value="94">Rabat - Aéroport</option>
+																	<option data-city="rabat" value="95">Rabat - Mon Hotel</option>
+																	<option data-city="tanger" value="87">Tanger - Aéroport</option>
+																	<option data-city="tanger" value="101">Tanger - Port Med</option>
+																	<option data-city="tanger" value="90">Tanger - Port ville</option>
+																	<option data-city="tetouan" value="91">Tétouan - Aéroport</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-md-4 col-7">
+															<div class="form-group">
+																<input type="date" name="date2" id="date2" class="form-control" value="2024-10-18" placeholder="Date de retour" lang="fr-fr">
+															</div>
+														</div>
+														<div class="col-md-4 col-5">
+															<div class="form-group">
+																<input type="time" name="hour2" id="hour2" class="form-control" value="10:00">
+															</div>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-md-4">
+															<div class="form-group">
+																<label class="checkbox-inline">
+																	<input type="checkbox" class="form-check-input me-2" name="aged" id="aged" checked="" required="">
+																	Agé entre 23 et 75 ans
+																</label>
+															</div>
+														</div>
+														<div class="col-md-4">
+														</div>
+														<div class="col-md-4">
+															<div class="form-group mb-0">
+																<button type="submit" class="btn btn-danger mr-xs mb-sm" id="recherche_reservation">
+																	<span id="load-icone"></span> <span class="glyphicon glyphicon glyphicon-search"></span> Chercher
+																</button>
+															</div>
+														</div>
+													</div>
+
+												</form>
+											</div>
+										</div>
+										<a class="ma-reservation pull-left" href="https://booking.samicar.ma/acc-samicar/index.jsp?sitelang=fr" title="Ma réservation"><i class="fa fa-calendar"></i> Ma réservation</a>
+									</div>
+								</div>
+							</div>
 						</div>
-		
-	</div>
-</div>		</div>
-	</section>	
-	
-	<section class="section section-no-background m-none">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 center">
-					<h2>Location de voitures sur <strong> tout le Maroc</strong></h2>
-				</div>
+					</div>
+				</section>
+				<!-- No services -->
+				<section class="section m-none services">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 text-center">
+								<h1 class="font-weight-bold">Samicar : <strong>Location de voiture </strong> partout au Maroc</h1>
+								<h2>Nos <strong>Services</strong></h2>
+							</div>
+						</div>
+						<div class="row my-5">
+							<div class="col-4">
+								<div class="row">
+									<div class="col-md-4">
+										<img loading="lazy" class="img-responsive mb-lg" width="100" height="100" src="100-online-booking.png" alt="Location de voiture 100% en ligne">
+									</div>
+									<div class="col-md-8">
+										<h3 class="font-weight-bold alternative-font-2 my-0">Réservation 100% en ligne</h3>
+										<p class="my-0">Pas besoin d'appeler au téléphone, pas besoin de demande de devis, tout est simple.</p>
+										<div class="text-end"><a class="btn btn-modern btn-primary btn-xs mb-1" href="/location-100-pour-100-en-ligne.php" title="Location de voiture 100% en ligne">Plus d'infos <i class="fa fa-arrow-right"></i></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-4">
+								<div class="row">
+									<div class="col-md-4">
+										<img loading="lazy" class="img-responsive mb-lg" width="100" height="100" src="no-credit-card.png" alt="Réservation sans dépot de garantie">
+									</div>
+									<div class="col-md-8">
+										<h3 class="font-weight-bold alternative-font-2 my-0">Réservation sans dépôt</h3>
+										<p class="my-0">Vous ne voulez pas bloquer une caution sur votre carte de crédit? Choisissez le pack Premium</p>
+										<div class="text-end"><a class="btn btn-modern btn-primary btn-xs mb-1" href="/location-sans-carte-credit" title="Réservation sans dépôt">Plus d'infos <i class="fa fa-arrow-right"></i></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-4">
+								<div class="row">
+									<div class="col-md-4">
+										<img loading="lazy" class="img-responsive mb-lg" width="100" height="100" src="one-way-rental.png" alt="Location de voiture �&nbsp; sense unique">
+									</div>
+									<div class="col-md-8">
+										<h3 class="font-weight-bold alternative-font-2 my-0">Réservation �&nbsp; sense unique</h3>
+										<p class="my-0">Prenez la voiture dans une ville et retournez-la dans une autre ville</p>
+										<div class="text-end"><a class="btn btn-modern btn-primary btn-xs mb-1" href="/location-de-voiture-inter-villes" title="Réservation �&nbsp; sense unique">Plus d'infos <i class="fa fa-arrow-right"></i></a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-4">
+								<div class="row">
+									<div class="col-md-4">
+										<img loading="lazy" class="img-responsive mb-lg" width="100" height="100" src="prix-final.png" alt="Prix final garanti">
+									</div>
+									<div class="col-md-8">
+										<h3 class="font-weight-bold alternative-font-2 my-0">Prix final garanti</h3>
+										<p class="my-0">Vous ne payez que ce qui a été affiché �&nbsp; la réservation! Pas de frais cachés</p>
+										<div class="text-end"><a class="btn btn-modern btn-primary btn-xs mb-1" href="/prix-final-garanti.php" title="Prix final garanti">Plus d'infos <i class="fa fa-arrow-right"></i></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-4">
+								<div class="row">
+									<div class="col-md-4">
+										<img loading="lazy" class="img-responsive mb-lg" width="100" height="100" src="airport-transfer.png" alt="Transfert Aéroport">
+									</div>
+									<div class="col-md-8">
+										<h3 class="font-weight-bold alternative-font-2 my-0">Transfert Aéroport</h3>
+										<p class="my-0">Un chauffeur professionnel pour faire de votre voyage une réelle détente</p>
+										<div class="text-end"><a class="btn btn-modern btn-primary btn-xs mb-1" href="/transfert-aeroport-casablanca.php" title="Transfert Aéroport Casablanca">Plus d'infos <i class="fa fa-arrow-right"></i></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-4">
+								<div class="row">
+									<div class="col-md-4">
+										<img loading="lazy" class="img-responsive mb-lg" width="100" height="100" src="online-check-in-small.png" alt="Enregistrement en ligne">
+									</div>
+									<div class="col-md-8">
+										<h3 class="font-weight-bold alternative-font-2 my-0">Enregistrement en ligne</h3>
+										<p class="my-0">Envoyez vos documents en ligne et simplifiez les démarches �&nbsp; l'arrivée</p>
+										<div class="text-end"><a class="btn btn-modern btn-primary btn-xs mb-1" href="/enregistrement-en-ligne.php" title="Enregistrement en ligne">Plus d'infos <i class="fa fa-arrow-right"></i></a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="section section-no-background m-none">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<h2 class="mb-lg"><strong>Samicar : </strong>Location de voitures au Maroc</h2>
+								<p class="lead">Samicar dispose actuellement de plus d'une agence au Maroc, présentes sur les plus grandes villes marocaines, <strong>Casablanca, Marrakech, Tanger, El Jadida, Rabat, Fes et Safi.</strong></p>
+								<p>La <a href="https://www.samicar.com/"><strong>Location voiture marrakech</strong></a> est facile avec notre agence Samicar qui vous offre une large gamme de voitures : Berlines, 4x4 et minibus... Organisez votre <a href="https://www.samicar.com/"><strong>Location de voitures</strong></a> et votre véhicules vous attendra dès votre arrivée �&nbsp; l’aéroport ou la gare de <strong>Marrakech</strong>. On vous permet de louer facilement et rapidement une voiture de votre choix �&nbsp; marrakech.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="section m-none">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 center">
+								<h2>Notre <strong>Sélection</strong></h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row">
+									<span class="col-md-4 thumb-info thumb-info-hide-wrapper-bg mb-xlg nohide" data-car="11" data-category="J">
+										<span class="thumb-info-wrapper">
+											<a href="reservation.php">
+												<picture>
+													<source type="image/webp" srcset="images/th-dacia-duster-2wd-.webp">
+													<img width="300" height="222" src="images/th-dacia-duster-2wd-.jpeg" alt="Dacia Duster 2wd" class="col-12 responsive-image">
+												</picture>
+												<span class="thumb-info-title">
+													<span class="thumb-info-inner">Dacia Duster 2wd</span>
+													<span class="thumb-info-type">A partir de <strong>45</strong> EUR</span>
+												</span>
+											</a>
+										</span>
+									</span>
+									<span class="col-md-4 thumb-info thumb-info-hide-wrapper-bg mb-xlg nohide" data-car="10" data-category="I">
+										<span class="thumb-info-wrapper">
+											<a href="reservation.php">
+												<picture>
+													<source type="image/webp" srcset="images/th-dacia-lodgy-7-places-.webp">
+													<img width="300" height="222" src="images/th-dacia-lodgy-7-places-.jpeg" alt="Dacia Lodgy 7 Places" class="col-12 responsive-image">
+												</picture>
+												<span class="thumb-info-title">
+													<span class="thumb-info-inner">Dacia Lodgy 7 Places</span>
+													<span class="thumb-info-type">A partir de <strong>35</strong> EUR</span>
+												</span>
+											</a>
+										</span>
+									</span>
+									<span class="col-md-4 thumb-info thumb-info-hide-wrapper-bg mb-xlg nohide" data-car="14" data-category="A">
+										<span class="thumb-info-wrapper">
+											<a href="reservation.php">
+												<picture>
+													<source type="image/webp" srcset="images/th-dacia-sandero-.webp">
+													<img width="300" height="222" src="images/th-dacia-sandero-.png" alt="DACIA Sandero" class="col-12 responsive-image">
+												</picture>
+												<span class="thumb-info-title">
+													<span class="thumb-info-inner">DACIA Sandero</span>
+													<span class="thumb-info-type">A partir de <strong>22</strong> EUR</span>
+												</span>
+											</a>
+										</span>
+									</span>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="section section-no-background m-none">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 center">
+								<h2>Location de voitures sur <strong> tout le Maroc</strong></h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="sort-destination-loader sort-destination-loader-loaded mt-4 pt-2">
+								<ul class="row portfolio-list sort-destination" data-sort-id="portfolio">
+									<li class="col-md-4 isotope-item brands">
+										<div class="portfolio-item">
+											<a href="/casablanca.php" title="Location voiture Casablanca">
+												<span class="thumb-info thumb-info-lighten">
+													<span class="thumb-info-wrapper">
+														<img loading="lazy" src="casablanca.avif" width="350" height="350" class="img-responsive" alt="Location voiture Casablanca">
+														<span class="thumb-info-title">
+															<span class="thumb-info-inner">Location voiture Casablanca</span>
+														</span>
+														<span class="thumb-info-action">
+															<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</li>
+									<li class="col-md-4">
+										<div class="portfolio-item">
+											<a href="/marrakech.php" title="Location voiture Marrakech">
+												<span class="thumb-info thumb-info-lighten">
+													<span class="thumb-info-wrapper">
+														<img loading="lazy" src="marrakech.avif" width="350" height="350" class="img-responsive" alt="Location voiture Marrakech">
+														<span class="thumb-info-title">
+															<span class="thumb-info-inner">Location voiture Marrakech</span>
+														</span>
+														<span class="thumb-info-action">
+															<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</li>
+									<li class="col-md-4">
+										<div class="portfolio-item">
+											<a href="/el-jadida.php" title="Location voiture El jadida">
+												<span class="thumb-info thumb-info-lighten">
+													<span class="thumb-info-wrapper">
+														<img loading="lazy" src="eljadida.avif" width="350" height="350" class="img-responsive" alt="Location voiture El jadida">
+														<span class="thumb-info-title">
+															<span class="thumb-info-inner">Location voiture El jadida</span>
+														</span>
+														<span class="thumb-info-action">
+															<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</li>
+									<li class="col-md-4">
+										<div class="portfolio-item">
+											<a href="/tanger.php" title="Location voiture Tanger">
+												<span class="thumb-info thumb-info-lighten">
+													<span class="thumb-info-wrapper">
+														<img loading="lazy" src="tanger.avif" width="350" height="350" class="img-responsive" alt="Location voiture Tanger">
+														<span class="thumb-info-title">
+															<span class="thumb-info-inner">Location voiture Tanger</span>
+														</span>
+														<span class="thumb-info-action">
+															<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</li>
+									<li class="col-md-4">
+										<div class="portfolio-item">
+											<a href="/agadir.php" title="Location voiture Agadir">
+												<span class="thumb-info thumb-info-lighten">
+													<span class="thumb-info-wrapper">
+														<img loading="lazy" src="agadir.avif" width="350" height="350" class="img-responsive" alt="Location voiture Agadir">
+														<span class="thumb-info-title">
+															<span class="thumb-info-inner">Location voiture Agadir</span>
+														</span>
+														<span class="thumb-info-action">
+															<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</li>
+									<li class="col-md-4">
+										<div class="portfolio-item">
+											<a href="/fes.php" title="Location voiture Fes">
+												<span class="thumb-info thumb-info-lighten">
+													<span class="thumb-info-wrapper">
+														<img loading="lazy" src="fes.avif" width="350" height="350" class="img-responsive" alt="Location voiture Fes">
+														<span class="thumb-info-title">
+															<span class="thumb-info-inner">Location voiture Fes</span>
+														</span>
+														<span class="thumb-info-action">
+															<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</li>
+									<li class="col-md-4">
+										<div class="portfolio-item">
+											<a href="/ouarzazate.php" title="Location voiture Ouarzazate">
+												<span class="thumb-info thumb-info-lighten">
+													<span class="thumb-info-wrapper">
+														<img loading="lazy" src="ouarzazate.avif" width="350" height="350" class="img-responsive" alt="Location voiture Ouarzazate">
+														<span class="thumb-info-title">
+															<span class="thumb-info-inner">Location voiture Ouarzazate</span>
+														</span>
+														<span class="thumb-info-action">
+															<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</li>
+									<li class="col-md-4">
+										<div class="portfolio-item">
+											<a href="/essaouira.php" title="Location voiture Essaouira">
+												<span class="thumb-info thumb-info-lighten">
+													<span class="thumb-info-wrapper">
+														<img loading="lazy" src="essaouira.avif" width="350" height="350" class="img-responsive" alt="Location voiture Essaouira">
+														<span class="thumb-info-title">
+															<span class="thumb-info-inner">Location voiture Essaouira</span>
+														</span>
+														<span class="thumb-info-action">
+															<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</li>
+									<li class="col-md-4">
+										<div class="portfolio-item">
+											<a href="/rabat.php" title="Location voiture Rabat">
+												<span class="thumb-info thumb-info-lighten">
+													<span class="thumb-info-wrapper">
+														<img loading="lazy" src="rabat.avif" width="350" height="350" class="img-responsive" alt="Location voiture Rabat">
+														<span class="thumb-info-title">
+															<span class="thumb-info-inner">Location voiture Rabat</span>
+														</span>
+														<span class="thumb-info-action">
+															<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+														</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</li>
+								</ul>
+								<div class="bounce-loader"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>
+							</div>
+						</div>
+					</div>
+				</section>
+
 			</div>
-			<div class="row">
-				<div class="sort-destination-loader sort-destination-loader-loaded mt-4 pt-2">
-					<ul class="row portfolio-list sort-destination" data-sort-id="portfolio">
-						<li class="col-md-4 isotope-item brands">
-							<div class="portfolio-item">
-								<a href="/casablanca.php" title="Location voiture Casablanca">
-									<span class="thumb-info thumb-info-lighten">
-										<span class="thumb-info-wrapper">
-											<img loading="lazy" src="casablanca.avif" width="350" height="350" class="img-responsive" alt="Location voiture Casablanca">
-											<span class="thumb-info-title">
-												<span class="thumb-info-inner">Location voiture Casablanca</span>
-											</span>
-											<span class="thumb-info-action">
-												<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
-											</span>
-										</span>
-									</span>
-								</a>
-							</div>
-						</li>
-						<li class="col-md-4">
-							<div class="portfolio-item">
-								<a href="/marrakech.php" title="Location voiture Marrakech">
-									<span class="thumb-info thumb-info-lighten">
-										<span class="thumb-info-wrapper">
-											<img loading="lazy" src="marrakech.avif" width="350" height="350" class="img-responsive" alt="Location voiture Marrakech">											
-											<span class="thumb-info-title">
-												<span class="thumb-info-inner">Location voiture Marrakech</span>
-											</span>
-											<span class="thumb-info-action">
-												<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
-											</span>
-										</span>
-									</span>
-								</a>
-							</div>
-						</li>
-						<li class="col-md-4">
-							<div class="portfolio-item">
-								<a href="/el-jadida.php" title="Location voiture El jadida">
-									<span class="thumb-info thumb-info-lighten">
-										<span class="thumb-info-wrapper">
-											<img loading="lazy" src="eljadida.avif" width="350" height="350" class="img-responsive" alt="Location voiture El jadida">
-											<span class="thumb-info-title">
-												<span class="thumb-info-inner">Location voiture El jadida</span>
-											</span>
-											<span class="thumb-info-action">
-												<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
-											</span>
-										</span>
-									</span>
-								</a>
-							</div>
-						</li>
-						<li class="col-md-4">
-							<div class="portfolio-item">
-								<a href="/tanger.php" title="Location voiture Tanger">
-									<span class="thumb-info thumb-info-lighten">
-										<span class="thumb-info-wrapper">
-											<img loading="lazy" src="tanger.avif" width="350" height="350" class="img-responsive" alt="Location voiture Tanger">
-											<span class="thumb-info-title">
-												<span class="thumb-info-inner">Location voiture Tanger</span>
-											</span>
-											<span class="thumb-info-action">
-												<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
-											</span>
-										</span>
-									</span>
-								</a>
-							</div>
-						</li>
-						<li class="col-md-4">
-							<div class="portfolio-item">
-								<a href="/agadir.php" title="Location voiture Agadir">
-									<span class="thumb-info thumb-info-lighten">
-										<span class="thumb-info-wrapper">
-											<img loading="lazy" src="agadir.avif" width="350" height="350" class="img-responsive" alt="Location voiture Agadir">
-											<span class="thumb-info-title">
-												<span class="thumb-info-inner">Location voiture Agadir</span>
-											</span>
-											<span class="thumb-info-action">
-												<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
-											</span>
-										</span>
-									</span>
-								</a>
-							</div>
-						</li>
-						<li class="col-md-4">
-							<div class="portfolio-item">
-								<a href="/fes.php" title="Location voiture Fes">
-									<span class="thumb-info thumb-info-lighten">
-										<span class="thumb-info-wrapper">
-											<img loading="lazy" src="fes.avif" width="350" height="350" class="img-responsive" alt="Location voiture Fes">
-											<span class="thumb-info-title">
-												<span class="thumb-info-inner">Location voiture Fes</span>
-											</span>
-											<span class="thumb-info-action">
-												<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
-											</span>
-										</span>
-									</span>
-								</a>
-							</div>
-						</li>
-						<li class="col-md-4">
-							<div class="portfolio-item">
-								<a href="/ouarzazate.php" title="Location voiture Ouarzazate">
-									<span class="thumb-info thumb-info-lighten">
-										<span class="thumb-info-wrapper">
-											<img loading="lazy" src="ouarzazate.avif" width="350" height="350" class="img-responsive" alt="Location voiture Ouarzazate">
-											<span class="thumb-info-title">
-												<span class="thumb-info-inner">Location voiture Ouarzazate</span>
-											</span>
-											<span class="thumb-info-action">
-												<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
-											</span>
-										</span>
-									</span>
-								</a>
-							</div>
-						</li>
-						<li class="col-md-4">
-							<div class="portfolio-item">
-								<a href="/essaouira.php" title="Location voiture Essaouira">
-									<span class="thumb-info thumb-info-lighten">
-										<span class="thumb-info-wrapper">
-											<img loading="lazy" src="essaouira.avif" width="350" height="350" class="img-responsive" alt="Location voiture Essaouira">
-											<span class="thumb-info-title">
-												<span class="thumb-info-inner">Location voiture Essaouira</span>
-											</span>
-											<span class="thumb-info-action">
-												<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
-											</span>
-										</span>
-									</span>
-								</a>
-							</div>
-						</li>
-						<li class="col-md-4">
-							<div class="portfolio-item">
-								<a href="/rabat.php" title="Location voiture Rabat">
-									<span class="thumb-info thumb-info-lighten">
-										<span class="thumb-info-wrapper">
-											<img loading="lazy" src="rabat.avif" width="350" height="350" class="img-responsive" alt="Location voiture Rabat">
-											<span class="thumb-info-title">
-												<span class="thumb-info-inner">Location voiture Rabat</span>
-											</span>
-											<span class="thumb-info-action">
-												<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
-											</span>
-										</span>
-									</span>
-								</a>
-							</div>
-						</li>
-					</ul>
-				<div class="bounce-loader"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div>
-			</div>
-		</div>
-	</section>
-		
-</div>
     <footer id="footer" class="mt-0">
         <div class="container my-0">
             <div class="row py-5">
